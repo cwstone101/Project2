@@ -2,6 +2,7 @@
 const express = require('express');
 const Products = require('./models/books')
 const app = express();
+const methodOverride = require('method-override');
 
 //Importing dotenv in order to connec to database
 require('dotenv').config();
@@ -16,6 +17,9 @@ app.use((req, res, next) => {
     console.log('Running Routes');
     next();
 });
+
+app.use(methodOverride('_method'));
+
 
 //defining new variable to my model
 const bookData = require('./models/books')
@@ -41,12 +45,18 @@ app.get('/home/edit', (req,res) => {
 });
 
 
+//route that takes to delete Page 
+app.get('/delete', (req,res) => {
+    res.render('Deleted')
+});
+
+
 // route for deleting item
-app.delete('/home/:id/delete', (req,res) => {
+app.delete('/home/:id/delete?_method=DELETE', (req,res) => {
     console.log(req.params.id)
     let deleteBook = Products.findByIdAndDelete(req.params.id)
         console.log(deleteBook)
-        res.redirect('Deleted')
+        res.redirect('/home/Deleted')
 
 });
 
