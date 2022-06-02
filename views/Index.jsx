@@ -17,10 +17,13 @@ class Index extends React.Component{
                             {Products.map(( Products, i) =>{
                                 return (
                                     <li>
-                                        <a href={`/product/${i}`}> <h3>{Products.name}</h3></a><h4>Price:{`
+                                        <a href={`/product/${i}`} ><img src={Products.img}></img> <h3>{Products.name}</h3></a><h4>Price:{`
                                         `}${Products.price}</h4> <br />
+                                        <div>
+
+                                       {/* <img src={Products.img}></img> */}
                                         <br />
-                                        
+                                        </div>
                                         </li>
                                     
                                 );

@@ -16,7 +16,8 @@ class Show extends React.Component {
                 <br />
                 <img src={Products.Products.img}></img>
                 <br />
-                <a href={`/home/${Products.id}/delete`}>Press to Delete</a>
+                <a href="/delete">Press to Delete Item</a>
+                {/* <a href={`/home/${Products.id}/delete`}>Press to Delete</a> */}
                 {/* <a href="/home/:id/delete">Delete a book from menu</a> */}
                 
             </div>
