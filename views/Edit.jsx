@@ -1,13 +1,16 @@
 const React = require('react');
-
+const myBackground = {backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxshMKMoViI_U7ctFO3y-qLiuNqeIqyB2Ieg&usqp=CAU')"
+,backgroundSize: "cover"
+}
 class Edit extends React.Component{
 
     render() {
 
         return(
             <>
-            
-            <nav>,<br />
+            <body style={myBackground}>
+                
+                        <nav>,<br />
                 <a href="/home"> Home </a>
             </nav>
             <form action="/home" method= 'POST'>
@@ -19,7 +22,7 @@ class Edit extends React.Component{
 
             
             </form>
-            
+            </body>
             </>
         )
     }
