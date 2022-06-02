@@ -19,7 +19,9 @@ class Show extends React.Component {
                 <a href="/delete">Press to Delete Item</a>
                 {/* <a href={`/home/${Products.id}/delete`}>Press to Delete</a> */}
                 {/* <a href="/home/:id/delete">Delete a book from menu</a> */}
-                
+                <br />
+                <a href="/home/edit">Edit a Product</a>
+                <br />
             </div>
         );
     }
